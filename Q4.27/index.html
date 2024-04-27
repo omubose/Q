@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Snap onomichi</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="./favicon.ico" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <!-- 案件では実際のURLを入れる -->
+    <meta property="og:url" content="https://example.com/" />
+    <!-- 案件では実際のURLを入れる -->
+    <meta property="og:image" content="https://example.com/img/ogp.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru:wght@400;500&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header -->
+      <header id="js-header" class="header">
+        <div class="header__inner">
+          <h1 class="header__logo">
+            <a href="#"
+              ><img
+                src="./img/img-logo.png"
+                alt="Snap Onomichi"
+                width="366"
+                height="48"
+                decoding="async"
+            /></a>
+          </h1>
+          <nav class="header__nav" aria-label="グローバルナビゲーション">
+            <a href="#about" class="header__link">キャンペーンについて</a>
+            <a href="#prizes" class="header__link">特典</a>
+            <a href="#spots" class="header__link">おすすめスポット</a>
+            <a href="#qa" class="header__link">よくある質問</a>
+            <a href="#entry-requirements" class="header__link">参加要項</a>
+            <div class="header__button">
+              <a href="#how-to-entry" class="button button--md-small"
+                >応募してみる</a
+              >
+            </div>
+          </nav>
+          <div class="header__open">
+            <button
+              id="js-drawer-icon"
+              type="button"
+              class="drawer-icon"
+              aria-label="メニューボタン"
+            >
+              <span class="drawer-icon__bar">
+                <span class="drawer-icon__dot"></span>
+              </span>
+              <span class="drawer-icon__bar"></span>
+              <span class="drawer-icon__bar"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- drawer content -->
+      <div id="js-drawer-content" class="drawer-content">
+        <nav class="drawer-content__menu" aria-label="ドロワーナビゲーション">
+          <a href="#about" class="drawer-content__link">キャンペーンについて</a>
+          <a href="#prizes" class="drawer-content__link">キャンペーン特典</a>
+          <a href="#spots" class="drawer-content__link">おすすめスポット</a>
+          <a href="#qa" class="drawer-content__link">よくある質問</a>
+          <a href="#entry-requirements" class="drawer-content__link"
+            >参加要項</a
+          >
+          <a href="#content" class="drawer-content__link">お問い合わせ</a>
+          <div class="drawer-content__button">
+            <a href="#how-to-entry" class="button">応募してみる</a>
+          </div>
+        </nav>
+      </div>
+
+      <!-- fv -->
+      <section class="first-view">
+        <picture class="first-view__background-image">
+          <source
+            media="(min-width: 600px)"
+            srcset="./img/bg_first-view_pc.webp"
+            width="3240"
+            height="1480"
+          />
+          <img
+            src="./img/bg_first-view_sp.webp"
+            alt="背景写真・尾道を上から見下ろした風景"
+            width="750"
+            height="1110"
+            decoding="async"
+          />
+        </picture>
+        <div class="first-view__inner">
+          <p class="first-view__description">
+            あなたの見つけたレトロな尾道の一枚を<br />Instagramに投稿しよう
+          </p>
+          <h2 class="first-view__lead">
+            <picture>
+              <source
+                media="(min-width: 900px)"
+                srcset="./img/text_first-view_1pc.svg"
+                width="520"
+                height="158"
+              />
+              <img
+                src="/img/text_first-view_1sp.svg"
+                alt="見つけて尾道レトロキャンペーン"
+                width="335"
+                height="105"
+                decoding="async"
+              />
+            </picture>
+          </h2>
+          <div class="first-view__decoration-wrap">
+            <div class="first-view__decoration-smart-phone">
+              <div class="decoration-smart-phone">
+                <picture class="decoration-smart-phone__image">
+                  <source
+                    media="(min-width: 900px)"
+                    srcset="./img/deco_first-view1_pc.webp"
+                    width="500"
+                    height="1020"
+                  />
+                  <img
+                    src="./img/deco_first-view1_sp.webp"
+                    alt="スマートフォンにインスタの写真"
+                    width="400"
+                    height="816"
+                    decoding="async"
+                  />
+                </picture>
+                <div class="decoration-smart-phone__wrap">
+                  <h3 class="decoration-smart-phone__heading">
+                    #見つけて尾道レトロ
+                  </h3>
+                  <div class="decoration-smart-phone__body">
+                    <h4 class="decoration-smart-phone__sub-heading">
+                      <span>応募期間</span>
+                    </h4>
+                    <p class="decoration-smart-phone__text">
+                      2022/8/1(月)〜9/30(金)
+                    </p>
+                    <div class="decoration-smart-phone__button">
+                      <a href="how-to-enter" class="button button-small"
+                        >応募してみる</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <picture class="first-view__decoration-english-message">
+              <source
+                media="(min-width: 900px)"
+                srcset="./img/text_first-view2_pc.webp"
+                width="488"
+                height="260"
+              />
+              <img
+                src="./img/text_first-view2_sp.webp"
+                alt="share a moment in a snap"
+                width="286"
+                height="160"
+                decoding="async"
+              />
+            </picture>
+            <div class="first-view__decoration-red-circle-text">
+              <img
+                src="./img/text_first-view3.svg"
+                alt="尾道ギフトを100名様にプレゼント"
+                width="360"
+                height="360"
+                decoding="async"
+              />
+            </div>
+            <div class="first-view__decoration-coffee-and-sweets">
+              <img
+                src="./img/deco_first-view2.webp"
+                alt="コーヒーとお菓子"
+                width="424"
+                height="664"
+                decoding="async"
+              />
+            </div>
+            <div class="first-view__decoration-cats">
+              <div class="decoration-cats1">
+                <img
+                  class="decoration-cats1__1"
+                  src="./img/deco_first-view3.webp"
+                  alt="黒色の猫"
+                  width="340"
+                  height="380"
+                  decoding="async"
+                />
+                <img
+                  class="decoration-cats1__2"
+                  src="./img/deco_first-view4.webp"
+                  alt="茶色の猫"
+                  width="466"
+                  height="348"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- about -->
+      <section id="about" class="about">
+        <div
+          class="about__decoration about__decoration-striped-pattern hidden-sp"
+        >
+          <img
+            src="./img/deco_about1.webp"
+            alt="装飾:四角い縞模様"
+            width="500"
+            height="500"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <picture class="about__decoration about__decoration-picture-left">
+          <source
+            media="(min-width: 900px)"
+            srcset="./img/deco_about2_pc.webp"
+            width="960"
+            height="960"
+          />
+          <img
+            src="./img/deco_about2_sp.webp"
+            alt="ロープウェイから街を見下ろしています"
+            width="400"
+            height="400"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+        <picture class="about__decoration about__decoration-staircase">
+          <source
+            media="(min-width: 900px)"
+            srcset="./img/deco_about3_pc.webp"
+            width="854"
+            height="1634"
+          />
+          <img
+            src="./img/deco_about3_sp.webp"
+            alt="階段を女性2人が登っています"
+            width="276"
+            height="430"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+        <div class="about__decoration about__decoration-striped-pawpads">
+          <img
+            src="./img/deco_pawpads-right.svg"
+            alt="猫の足跡"
+            width="100"
+            height="220"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <picture class="about__decoration about__decoration-picture-right">
+          <source
+            media="(min-width: 900px)"
+            srcset="./img/deco_about4_pc.webp"
+            width="961"
+            height="961"
+          />
+          <img
+            src="./img/deco_about4_sp.webp"
+            alt="海辺にフェリーが止まっています"
+            width="401"
+            height="401"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+        <div class="about__decoration about__decoration-wave hidden-sp">
+          <img
+            src="./img/deco_about.svg"
+            alt="波の模様"
+            width="876"
+            height="48"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="about__decoration about__decoration-goods1">
+          <img
+            src="./img/deco_about5.webp"
+            alt="雑貨"
+            width="202"
+            height="201"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="about__decoration about__decoration-goods2">
+          <img
+            src="./img/deco_about6.webp"
+            alt="雑貨"
+            width="616"
+            height="302"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="about__inner">
+          <div class="about-top">
+            <div class="about-top__image-left">
+              <img
+                src="./img/img_about1.webp"
+                alt="街を見下ろしています。天寧寺 海雲塔や、たくさんの家や、海と山が写っています。"
+                width="269"
+                height="201"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="about-top__image-right">
+              <img
+                src="./img/img_about2.webp"
+                alt="写真:海辺にベンチが写っています"
+                width="269"
+                height="201"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <hgroup class="heading heading--campaign">
+              <p class="heading__english">About</p>
+              <h2 class="heading__japanese">キャンペーンについて</h2>
+            </hgroup>
+            <h3 class="about-top__sub-heading hidden-pc">
+              あなたの心が動いた尾道の瞬間を<br />＼教えて下さい！／
+            </h3>
+            <h3 class="about-top__sub-heading hidden-sp">
+              ＼あなたの心が動いた尾道の瞬間を教えて下さい！／
+            </h3>
+            <div class="about-top__text-wrap">
+              <p class="about-top__text">
+                風情あふれる坂道に、静かに佇むお寺。<br />路地裏の角をまがれば<br
+                  class="hidden-pc"
+                />
+                気ままにお昼寝する猫に出会え、<br />
+                ふと振り返れば、美しい瀬戸内の海が。
+              </p>
+              <p class="about-top__text">
+                数々の映画の舞台にもなってきたこの街には<br />心がほどけるような、<br
+                  class="hidden-pc"
+                />
+                レトロでやさしい風景が広がっています。
+              </p>
+              <p class="about-top__text">
+                あなたの見つけた尾道のなつかしい景色を、<br />ぜひおしえてください。
+              </p>
+              <p class="about-top__text">
+                尾道観光部（
+                <a href target="_blank" class="link-text">@onomichi_retro</a>
+                ）を<br class="hidden-pc" />フォロー&<br
+                  class="hidden-sp"
+                />尾道で撮影した写真を、<br class="hidden-pc" />
+                ハッシュタグ「<em class="font-weight-bold"
+                  >#見つけて尾道レトロ</em
+                >」を<br class="hidden-pc" />つけて<br
+                  class="hidden-sp"
+                />Instagramに投稿いただいた方の中から<br />
+              </p>
+              <strong class="about-top__emphasis-text"
+                >尾道のギフトを100名様にプレゼント！</strong
+              >
+            </div>
+            <div class="about-top__button">
+              <a href="#how-to-entry" class="button">参加の仕方はこちら</a>
+            </div>
+          </div>
+        </div>
+        <div class="about__bottom">
+          
+            <div class="about__decoration-english">
+              <img
+                src="./img/text_onomichi.webp"
+                alt="ONOMICHI"
+                width="1812"
+                height="300"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          
+
+          <!-- sliders -->
+          <div class="about__slider">
+            <!-- Slider main container -->
+            <div id="js-about-swiper" class="swiper about-swiper">
+              <!-- Additional required wrapper -->
+              <div id="js-about-swiper-wrap" class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide about-swiper__slide">
+                  <img
+                    src="./img/img_about-slide1.webp"
+                    alt="写真:木のお皿にサンドイッチとサラダとヨーグルが乗っています"
+                    width="400"
+                    height="400"
+                    decoding="async"
+                  />
+                </div>
+                <div class="swiper-slide about-swiper__slide">
+                  <img
+                    src="./img/img_about-slide2.webp"
+                    alt="写真:猫が寝ています"
+                    width="400"
+                    height="400"
+                    decoding="async"
+                  />
+                </div>
+                <div class="swiper-slide about-swiper__slide">
+                  <img
+                    src="./img/img_about-slide3.webp"
+                    alt="写真:U2と書かれた建物"
+                    width="400"
+                    height="400"
+                    decoding="async"
+                  />
+                </div>
+                <div class="swiper-slide about-swiper__slide">
+                  <img
+                    src="./img/img_about-slide4.webp"
+                    alt="写真:UN!!とパッケージに書いてあるお菓子"
+                    width="400"
+                    height="400"
+                    decoding="async"
+                  />
+                </div>
+                <div class="swiper-slide about-swiper__slide">
+                  <img
+                    src="./img/img_about-slide5.webp"
+                    alt="写真:テーブルの上にコーヒーと本が置いてあります。奥に猫がいます。"
+                    width="400"
+                    height="400"
+                    decoding="async"
+                  />
+                </div>
+                <div class="swiper-slide about-swiper__slide">
+                  <img
+                    src="./img/img_about-slide6.webp"
+                    alt="写真:猫が寝ています"
+                    width="400"
+                    height="400"
+                    decoding="async"
+                  />
+                </div>
+                <div class="swiper-slide about-swiper__slide">
+                  <img
+                    src="./img/img_about-slide7.webp"
+                    alt="写真:海沿いのテラス席にテーブルがたくさん並んでいます"
+                    width="400"
+                    height="400"
+                    decoding="async"
+                  />
+                </div>
+                <div class="swiper-slide about-swiper__slide">
+                  <img
+                    src="./img/img_about-slide8.webp"
+                    alt="写真:オレンジジュースを注いでいます"
+                    width="400"
+                    height="400"
+                    decoding="async"
+                  />
+                </div>
+                <div class="swiper-slide about-swiper__slide">
+                  <img
+                    src="./img/img_about-slide9.webp"
+                    alt="写真:神社。おみくじと大きな岩と木が写っています"
+                    width="400"
+                    height="400"
+                    decoding="async"
+                  />
+                </div>
+                <div class="swiper-slide about-swiper__slide">
+                  <img
+                    src="./img/img_about-slide10.webp"
+                    alt="写真:猫が寝ています。"
+                    width="400"
+                    height="400"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./js/lib/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
