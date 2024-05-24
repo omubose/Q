@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="./img/icon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="splash">
+      <div id="splash_logo">
+        <img src="./img/yakitorisplash.png" alt="" class="fadeUp">
+      </div>
+    </div>
+
+    <header class="header container">
+      <div class="header-flex">
+        <h1 class="header__logo">
+          <a href="#"><img src="./img/yakitorilogo.png" alt="" /></a>
+          <img class="banlogo"  src="./img/banlogo.png" alt="">
+        
+        </h1>
+       
+        <nav class="header__nav" >
+          <ul class="header__list" id="page-link">
+            <li class="header__item"><a href="#news">お知らせ</a></li>
+            <li class="header__item"><a href="#creative">料理のご紹介</a></li>
+            <li class="header__item"><a href="#footer">店舗のご案内</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header__btn"><a href="#">オンラインストアを見る</a></div>
+    </header>
+
+    <section class="news" id="news">
+      <div class="inner">
+        <div class="news__flex">
+          <h2 class="news__section-title">
+            <span class="news__section-title-en">News</span>
+            <span class="news__section-title-ja">お知らせ</span>
+          </h2>
+
+          <dl class="news__list">
+            <dt class="news__term">2021.01.01</dt>
+            <dd class="news__definition">タイトルタイトルタイトルタイトル</dd>
+            <dt class="news__term">2021.01.01</dt>
+            <dd class="news__definition">タイトルタイトルタイトルタイトル</dd>
+            <dt class="news__term">2021.01.01</dt>
+            <dd class="news__definition">タイトルタイトルタイトルタイトル</dd>
+            <dt class="news__term">2021.01.01</dt>
+            <dd class="news__definition">タイトルタイトルタイトルタイトル</dd>
+            <dt class="news__term">2021.01.01</dt>
+            <dd class="news__definition">タイトルタイトルタイトルタイトル</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="creative" id="creative">
+      <div class="inner">
+        <div class="creative__flex">
+          <h2 class="creative__section-title">
+            <span class="creative__section-title-ja">素材からの創造</span>
+            <span class="creative__section-title-en">Creation From Materials</span>
+          </h2>
+          <div class="creative__img  box fadeUpTrigger">
+            <img src="./img/yakitori.jpg" alt="" />
+            <div class="creative__card">
+              <p class="creative__text">
+                素材を生かし<br />最大限に味を引き出す
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="science">
+      <div class="inner">
+        <div class="science__flex">
+          <h2 class="science__section-title">
+            <span class="science__section-title-ja">味への探究</span>
+            <span class="science__section-title-en">A Quest For Taste</span>
+          </h2>
+          <div class="science__img   box fadeUpTrigger">
+            <img src="./img/ra-men.jpg" alt="" />
+            <div class="science__card">
+              <p class="science__text">
+                やきとりの他にも<br />こだわり抜いた料理
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="map">
+      <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3482.356996790753!2d-73.96864922020313!3d40.78227014597579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2589a018531e3%3A0xb9df1f7387a94119!2z44K744Oz44OI44Op44Or44O744OR44O844Kv!5e0!3m2!1sja!2sjp!4v1716497350516!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer class="footer" id="footer">
+      <div class="footer__flex">
+        <div class="footer__detail1">
+          <div class="footer__logo"><a href="#"><img src="./img/yakitorilogo.png" alt="" /></a></div>
+          <span class="footer__address"
+            >〒１０６−００３２ 東京都港区六本木５丁目××××</span
+          >
+          <span class="footer__tel">電話:０３−××××−××××</span>
+          <ul class="footer__list"  id="page-link2">
+            <li class="footer__item"><a href="#news">お知らせ</a></li>
+            <li class="footer__item"><a href="#creative">料理のご紹介</a></li>
+            <li class="footer__item"><a href="#footer">店舗のご案内</a></li>
+          </ul>
+          <div class="footer__link"></div>
+        </div>
+        <div class="footer__detail2">
+          <a class="footer__online" href="#">オンラインストアを見る</a>
+          <span>｜</span>
+          <a class="footer__contact" href="#">お問い合わせ</a>
+        </div>
+      </div>
+      <div class="top-logo"  id="page-top"><img src="./img/top-logo.png" alt=""></div>
+
+      <div class="footer_copyright">
+        <small class="footer__copyright">&copy; 坂内</small>
+      </div>
+     
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
