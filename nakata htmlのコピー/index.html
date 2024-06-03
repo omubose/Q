@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/vegas.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <h1 class="header__logo">
+          <a href="#"><img src="./img/logo-w.png" alt="" /></a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a href="#">ホーム</a></li>
+            <li class="header__item"><a href="#">メニュー</a></li>
+            <li class="header__item"><a href="category.html">お知らせ</a></li>
+            <li class="header__item"><a href="page.html">お問い合せ</a></li>
+            <li class="header__item">
+              <a href="https://www.instagram.com/" target="_blank"
+                ><img src="./img/Instagram.png" alt=""
+              /></a>
+            </li>
+            <li class="header__item">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><img src="./img/facebook.png" alt=""
+              /></a>
+            </li>
+            <li class="header__item">
+              <a href="https://twitter.com/" target="_blank"
+                ><img src="./img/twitter.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__open">
+          <button
+            type="button"
+            id="js-drawer-icon"
+            class="drawer-icon"
+            aria-label="メニューボタン"
+          >
+            <span class="drawer-icon__bar">
+              <span class="drawer-icon__dot"></span>
+            </span>
+            <span class="drawer-icon__bar"></span>
+            <span class="drawer-icon__bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Drawer Content -->
+    <div id="js-drawer-content" class="drawer-content">
+      <nav class="drawer-content__menu">
+        <a class="drawer-content__link" href="#">ホーム</a>
+        <a class="drawer-content__link" href="#">メニュー</a>
+        <a class="drawer-content__link" href="category.html">お知らせ</a>
+        <a class="drawer-content__link" href="page.html">お問い合せ</a>
+        <a
+          class="drawer-content__link"
+          href="https://www.instagram.com/"
+          target="_blank"
+          ><img src="./img/Instagram.png" alt=""
+        /></a>
+        <a
+          class="drawer-content__link"
+          href="https://www.facebook.com/"
+          target="_blank"
+          ><img src="./img/facebook.png" alt=""
+        /></a>
+        <a
+          class="drawer-content__link"
+          href="https://twitter.com/"
+          target="_blank"
+          ><img src="./img/twitter.png" alt=""
+        /></a>
+      </nav>
+    </div>
+
+    <div class="fv">
+      <div id="slider"></div>
+    </div>
+
+    <div class="about">
+      <div class="inner">
+        <div class="about__flex">
+          <div class="about__text">
+            <p>厳選された蕎麦粉と清らかな水で作り上げる</p>
+            <p>伝統の技と現代の感性が融合した</p>
+            <p>至高の味わいを心ゆくまでご堪能ください</p>
+          </div>
+          <div class="about__img-flex">
+            <div class="about_img1"><img src="./img/1-1.jpg" alt="" /></div>
+            <div class="about_img3"><img src="./img/3-4.jpg" alt="" /></div>
+
+            <div class="about_img2"><img src="./img/2-4.jpg" alt="" /></div>
+
+            <div class="about_img4"><img src="./img/4-4.jpg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="version1">
+      <div class="inner">
+        <div class="version1__flex">
+          <div class="version1__text">
+            <p>なか田のこだわりが詰まった一杯</p>
+            <p>厳選された蕎麦粉と</p>
+            <p>清らかな水で作り上げた</p>
+            <p>手打ち蕎麦をお楽しみください</p>
+          </div>
+          <div class="box fadeLeftTrigger version1__img"><img src="./img/soba1.jpg" alt="" /></div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="version2">
+      <div class="inner">
+        <div class="version2__flex">
+          <div class="version2__text">
+             
+            <p>極上の味わいをぜひご堪能ください</p>
+            <p>一本一本に込められた情熱と技が織りなす</p>
+            <p>なか田の職人が一心に打ち上げる蕎麦</p>
+        
+          </div>
+          <div class="box fadeRightTrigger version2__img"><img src="./img/soba2.jpg" alt="" /></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="version3">
+      <div class="inner">
+        <div class="version3__flex">
+          <div class="version3__text">
+            <p>なか田の蕎麦粉は</p>
+            <p>自然の風味を大切にした厳選素材</p>
+            <p>職人が丹精込めて作り上げる</p>
+            <p>風味豊かな一杯をお届けします</p>
+          </div>
+          <div class="box fadeLeftTrigger version3__img"><img src="./img/soba3.jpg" alt="" /></div>
+ 
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-container">
+      <ul class="slider">
+        <li><img src="./img/s-1.jpg" alt=""></li>
+        <li><img src="./img/s-2.jpg" alt=""></li>
+        <li><img src="./img/s-3.jpg" alt=""></li>
+        <li><img src="./img/s-4.jpg" alt=""></li>
+        <li><img src="./img/s-5.jpg" alt=""></li>
+        <li><img src="./img/s-6.jpg" alt=""></li>
+        <!--/slider--></ul>
+    </div>
+
+    <div class="map">
+      <iframe
+            class="map__iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3482.356996790753!2d-73.96864922020313!3d40.78227014597579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2589a018531e3%3A0xb9df1f7387a94119!2z44K744Oz44OI44Op44Or44O744OR44O844Kv!5e0!3m2!1sja!2sjp!4v1716497350516!5m2!1sja!2sjp"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__flex">
+        <div class="footer__logo"><a href=""><img src="./img/logo-ver.png" alt="" /></a></div>
+        <ul class="footer__list">
+         
+          <li class="footer__item"><a href="#">ホーム</a></li>
+          <li class="footer__item"><a href="page.html">お問い合せ</a></li>
+          <li class="footer__item"><a href="category.html">お知らせ</a></li>
+          <li class="footer__item"><a href="#">メニュー</a></li>
+          <li class="footer__item">
+            <a href="https://www.instagram.com/" target="_blank"
+              ><img src="./img/Instagram.png" alt=""
+            /></a>
+          </li>
+          <li class="footer__item">
+            <a href="https://www.facebook.com/" target="_blank"
+              ><img src="./img/facebook.png" alt=""
+            /></a>
+          </li>
+          <li class="footer__item">
+            <a href="https://twitter.com/" target="_blank"
+              ><img src="./img/twitter.png" alt=""
+            /></a>
+          </li>
+        </ul>
+        <div class="footer__address">
+          <span>〒◯◯◯ー◯◯◯◯</span>
+          <span>東京都◯◯区◯◯◯◯◯丁目◯◯</span>
+          <span>電話◯◯ー◯◯◯◯ー◯◯◯◯</span>
+        </div>
+      </div>
+      <div class="footer__copyright"><small>&copy; なか田</small></div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script script type="text/javascript" src="./js/vegas.min.js"></script>
+    <script script type="text/javascript" src="js/function.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

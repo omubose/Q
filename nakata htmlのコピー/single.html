@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/vegas.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <h1 class="header__logo">
+          <a href=""><img src="./img/logo-w.png" alt="" /></a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a href="">ホーム</a></li>
+            <li class="header__item"><a href="">メニュー</a></li>
+            <li class="header__item"><a href="">お知らせ</a></li>
+            <li class="header__item"><a href="">お問い合せ</a></li>
+            <li class="header__item">
+              <a href="https://www.instagram.com/" target="_blank"
+                ><img src="./img/Instagram.png" alt=""
+              /></a>
+            </li>
+            <li class="header__item">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><img src="./img/facebook.png" alt=""
+              /></a>
+            </li>
+            <li class="header__item">
+              <a href="https://twitter.com/" target="_blank"
+                ><img src="./img/twitter.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__open">
+          <button
+            type="button"
+            id="js-drawer-icon"
+            class="drawer-icon"
+            aria-label="メニューボタン"
+          >
+            <span class="drawer-icon__bar">
+              <span class="drawer-icon__dot"></span>
+            </span>
+            <span class="drawer-icon__bar"></span>
+            <span class="drawer-icon__bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Drawer Content -->
+    <div id="js-drawer-content" class="drawer-content">
+      <nav class="drawer-content__menu">
+        <a class="drawer-content__link" href="#">ホーム</a>
+        <a class="drawer-content__link" href="#">メニュー</a>
+        <a class="drawer-content__link" href="#">お知らせ</a>
+        <a class="drawer-content__link" href="#">お問い合せ</a>
+        <a
+          class="drawer-content__link"
+          href="https://www.instagram.com/"
+          target="_blank"
+          ><img src="./img/Instagram.png" alt=""
+        /></a>
+        <a
+          class="drawer-content__link"
+          href="https://www.facebook.com/"
+          target="_blank"
+          ><img src="./img/facebook.png" alt=""
+        /></a>
+        <a
+          class="drawer-content__link"
+          href="https://twitter.com/"
+          target="_blank"
+          ><img src="./img/twitter.png" alt=""
+        /></a>
+      </nav>
+    </div>
+
+    <section class="post">
+      <div class="inner post__inner">
+        <h2 class="post__title">お知らせ</h2>
+          <div class="post__card">
+            <a href="">
+              <h3 class="post__card-title">タイトルタイトルタイトル</h3>
+            <time class="post__time">2024.5.24</time>
+            <div class="post__img"><img src="./img/post1.jpeg" alt=""></div>
+            <p class="post__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </a>
+          </div>
+
+        <ul class="post__list">
+          <li class="post__item">1</li>
+          <li class="post__item">2</li>
+          <li class="post__item is-checked">3</li>
+          <li class="post__item">4</li>
+          <li class="post__item">5</li>
+        </ul>
+    
+        
+      </div>
+    </section>
+
+   
+    <footer class="footer">
+      <div class="footer__flex">
+        <div class="footer__logo"><a href=""><img src="./img/logo-ver.png" alt="" /></a></div>
+        <ul class="footer__list">
+         
+          <li class="footer__item"><a href="#">ホーム</a></li>
+          <li class="footer__item"><a href="">お問い合せ</a></li>
+          <li class="footer__item"><a href="">お知らせ</a></li>
+          <li class="footer__item"><a href="http://" target="_blank" rel="noopener noreferrer"></a>メニュー</li>
+          <li class="footer__item">
+            <a href="https://www.instagram.com/" target="_blank"
+              ><img src="./img/Instagram.png" alt=""
+            /></a>
+          </li>
+          <li class="footer__item">
+            <a href="https://www.facebook.com/" target="_blank"
+              ><img src="./img/facebook.png" alt=""
+            /></a>
+          </li>
+          <li class="footer__item">
+            <a href="https://twitter.com/" target="_blank"
+              ><img src="./img/twitter.png" alt=""
+            /></a>
+          </li>
+        </ul>
+        <div class="footer__address">
+          <span>〒◯◯◯ー◯◯◯◯</span>
+          <span>東京都◯◯区◯◯◯◯◯丁目◯◯</span>
+          <span>電話◯◯ー◯◯◯◯ー◯◯◯◯</span>
+        </div>
+      </div>
+      <div class="footer__copyright"><small>&copy; なか田</small></div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script script type="text/javascript" src="./js/vegas.min.js"></script>
+    <script script type="text/javascript" src="js/function.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
