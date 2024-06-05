@@ -1,0 +1,24 @@
+<?php get_header("sub"); ?>
+
+
+    <section id="news" class="wp-page">
+      <div class="inner">
+        <div class="news__container">
+          <h2 class="section-title">コンタクト</h2>
+        </div>
+
+        <div class="wp-page__container contact-wp">
+        <?php if(have_posts()):while(have_posts()):the_post(); ?>
+        <!-- <h2 class="contact-wp__title"><?php the_title(); ?></h2> -->
+          <div class="contact-wp__card">
+          <?php the_post_thumbnail(); ?>
+              <p class="post-text">
+              <?php the_content(); ?>
+              </p>
+            <?php endwhile;endif; ?>
+          <div class="top"><a href="<?php echo esc_url( home_url() ); ?>">topページへ戻る </a></div>
+        </div>
+      </div>
+    </section>
+
+    <?php get_footer("sub"); ?>

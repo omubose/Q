@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link rel="icon" href="./img/favicon .ico" />
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    /> -->
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header id="js-header" class="header">
+      <div class="header__header">
+        <div class="inner">
+          <h1 class="header__logo">
+            <a href="#"><img src="./img/logo.png" alt="" /></a>
+          </h1>
+        </div>
+      </div>
+      <div class="inner header__inner">
+        <div class="header__card">
+          <div class="header__logo-maru">
+            <a href="#"><img src="./img/logo-maru.png" alt="" /></a>
+          </div>
+          <h2 class="header__desc">
+            <span>誰でも安心</span>
+            <span>豊かな自然</span>
+            <span>キャンプ場</span>
+          </h2>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a href="#about">バラックについて</a></li>
+            <li class="header__item"><a href="#news">お知らせ</a></li>
+            <li class="header__item"><a href="#blog">ブログ</a></li>
+            <li class="header__item"><a href="">コンタクト</a></li>
+            <li class="header__item"><a href="#access">アクセス</a></li>
+          </ul>
+        </nav>
+        <div class="header__open">
+          <button
+            type="button"
+            id="js-drawer-icon"
+            class="drawer-icon"
+            aria-label="メニューボタン"
+          >
+            <span class="drawer-icon__bar"></span>
+            <span class="drawer-icon__bar"></span>
+            <span class="drawer-icon__bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="fv">
+      <ul class="slider">
+        <li class="slider-item slider-item01"></li>
+        <li class="slider-item slider-item02"></li>
+        <li class="slider-item slider-item03"></li>
+      </ul>
+    </div>
+
+    <!-- Drawer Content -->
+    <div id="js-drawer-content" class="drawer-content">
+      <nav class="drawer-content__menu">
+        <a class="drawer-content__link" href="#about">バラックについて</a>
+        <a class="drawer-content__link" href="#news">お知らせ</a>
+        <a class="drawer-content__link" href="#blog">ブログ</a>
+        <a class="drawer-content__link" href="#">コンタクト</a>
+        <a class="drawer-content__link" href="#access">アクセス</a>
+      </nav>
+    </div>
+
+    <section id="about" class="about">
+      <div class="inner">
+        <div class="about__container">
+          <div class="about__img blurTrigger">
+            <img src="./img/car-mountain.png" alt="" />
+          </div>
+          <div class="about__desc">
+            <div>
+              <h2 class="about__title">
+                キャンプの自由と
+                <br />
+                人生の豊かさを<br class="br-hidden-sm" />全ての人に
+              </h2>
+              <p class="about__text">
+                キャンプサイトバラックは
+                <br />
+                初心者から上級者まで全ての<br
+                  class="br-hidden-sm"
+                />キャンパーが
+                <br />
+                楽しめる多彩な自然体験を<br class="br-hidden-sm" />提供します。
+                <br />
+                <br />
+                初心者向けには快適なコテージや<br
+                  class="br-hidden-sm"
+                />レンタルテント
+                <br />
+                ガイド付き自然散策や<br
+                  class="br-hidden-sm"
+                />バーベキュー体験などを完備し
+                <br />
+                安心してキャンプデビューできる<br
+                  class="br-hidden-sm"
+                />環境を整えました
+                <br />
+                <br />
+                上級者向けには広大な森林や<br
+                  class="br-hidden-sm"
+                />トレッキングコース
+                <br />
+                自力で設営するキャンプサイトを<br class="br-hidden-sm" />提供。
+                <br />
+                <br />
+                定期的なイベントで<br class="br-hidden-sm" />全てのキャンパーが
+                <br />
+                自然の美しさを共有し<br
+                  class="br-hidden-sm"
+                />交流できる場を提供します。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="photo__flex">
+          <div class="photo__img box blurTrigger">
+            <img src="./img/s1.jpg" alt="" />
+          </div>
+          <div class="photo__img box blurTrigger">
+            <img src="./img/s2.jpg" alt="" />
+          </div>
+          <div class="photo__img box blurTrigger">
+            <img src="./img/s3.jpg" alt="" />
+          </div>
+          <div class="photo__img box blurTrigger">
+            <img src="./img/s4.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="photo">
+      <div class="inner">
+        <div class="photo__flex">
+          <div class="photo__img"><img src="./img/s1.jpg" alt="" /></div>
+          <div class="photo__img"><img src="./img/s2.jpg" alt="" /></div>
+          <div class="photo__img"><img src="./img/s3.jpg" alt="" /></div>
+          <div class="photo__img"><img src="./img/s4.jpg" alt="" /></div>
+
+        </div>
+     
+      </div>
+    </div> -->
+
+    <section id="news" class="news">
+      <div class="inner">
+        <div class="news__container">
+          <div class="news__fire fadeRightTrigger"><img src="./img/fire.png" alt="" /></div>
+          <div class="news__ornament">
+            <img src="./img/ornament.png" alt="" />
+          </div>
+          <div class="news__bear box fadeLeftTrigger"><img src="./img/bear.png" alt="" /></div>
+
+          <h2 class="section-title">お知らせ</h2>
+        </div>
+
+        <div class="news__cards">
+          <div class="news__card">
+            <div class="news__img">
+              <a href=""><img src="./img/e1.jpg" alt="" /></a>
+            </div>
+            <h3 class="news__title"><a href="">タイトルタイトルタイトル</a></h3>
+            <time class="news__time">2024.5.24</time>
+          </div>
+          <div class="news__card">
+            <div class="news__img">
+              <a href=""><img src="./img/e2.jpg" alt="" /></a>
+            </div>
+            <h3 class="news__title"><a href="">タイトルタイトルタイトル</a></h3>
+            <time class="news__time">2024.5.24</time>
+          </div>
+          <div class="news__card">
+            <div class="news__img">
+              <a href=""><img src="./img/e3.jpg" alt="" /></a>
+            </div>
+            <h3 class="news__title"><a href="">タイトルタイトルタイトル</a></h3>
+            <time class="news__time">2024.5.24</time>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="blog">
+      <div class="inner">
+        <div class="blog__container">
+          <div class="blog__tent fadeRightTrigger"><img src="./img/tent.png" alt="" /></div>
+          <div class="blog__ornament">
+            <img src="./img/ornament.png" alt="" />
+          </div>
+          <div class="blog__mountain box fadeLeftTrigger">
+            <img src="./img/mountain.png" alt="" />
+          </div>
+          <h2 class="section-title">Blog</h2>
+        </div>
+
+        <div class="blog__cards">
+          <div class="blog__card">
+            <div class="blog__img">
+              <a href=""><img src="./img/e4.jpg" alt="" /></a>
+            </div>
+            <h3 class="blog__title"><a href="">タイトルタイトルタイトル</a></h3>
+            <time class="blog__time">2024.5.24</time>
+          </div>
+          <div class="blog__card">
+            <div class="blog__img">
+              <a href=""><img src="./img/e5.jpg" alt="" /></a>
+            </div>
+            <h3 class="blog__title"><a href="">タイトルタイトルタイトル</a></h3>
+            <time class="blog__time">2024.5.24</time>
+          </div>
+          <div class="blog__card">
+            <div class="blog__img">
+              <a href=""><img src="./img/e6.jpg" alt="" /></a>
+            </div>
+            <h3 class="blog__title"><a href="">タイトルタイトルタイトル</a></h3>
+            <time class="blog__time">2024.5.24</time>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="access">
+      <h2 class="section-title">アクセス</h2>
+      <div class="access__map">
+        <iframe
+        class="map__iframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3482.356996790753!2d-73.96864922020313!3d40.78227014597579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2589a018531e3%3A0xb9df1f7387a94119!2z44K744Oz44OI44Op44Or44O744OR44O844Kv!5e0!3m2!1sja!2sjp!4v1716497350516!5m2!1sja!2sjp"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      </div>
+      <div class="access__desc">
+        <span>◯◯県◯◯◯◯町</span>
+        <span>◯◯◯◯線「◯◯町駅」から車で15分</span>
+        <span>◯◯◯スマートIC から車で25分</span>
+        <span>TEL ◯◯◯ー◯◯◯ー◯◯◯</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#about">バラックについて</a></li>
+          <li class="footer__item"><a href="#news">お知らせ</a></li>
+          <li class="footer__item"><a href="#blog">ブログ</a></li>
+          <li class="footer__item"><a href="">コンタクト</a></li>
+          <li class="footer__item"><a href="#access">アクセス</a></li>
+        </ul>
+      </nav>
+      <div class="footer__logo-card">
+        <div class="footer__camp-logo">
+          <a href="#"><img src="./img/camp-logo.png" alt="" /></a>
+        </div>
+        <div class="footer__logo">
+          <a href="#"><img src="./img/logo.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="footer__sns-nav">
+        <div class="footer__sns">
+          <a  href="https://www.facebook.com/"
+          target="_blank"><img src="./img/facebook.png" alt="" /></a>
+        </div>
+        <div class="footer__sns">
+          <a href="https://www.instagram.com/"
+          target="_blank"><img src="./img/instagram.png" alt="" /></a>
+        </div>
+        <div class="footer__sns">
+          <a href="https://twitter.com/"
+          target="_blank"><img src="./img/twitter.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <small>&copy; ballack</small>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
