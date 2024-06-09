@@ -1,0 +1,1003 @@
+@use "sass:map";
+
+ $font-ja:  "Noto Sans JP", sans-serif;
+ $font-en: "Kanit", sans-serif;
+
+$breakpoints: (
+  sm: "screen and (min-width: 600px)",
+  md: "screen and (min-width: 768px)",
+  lg: "screen and (min-width: 900px)",
+  xl: "screen and (min-width: 1200px)",
+);
+
+@mixin mq($breakpoint: md) {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  font-family: $font-ja;
+  font-size: 16px;
+  line-height: 1.9;
+    // ドロワーメニュー動くのを防ぐ
+    &.is-fixed {
+      overflow: hidden  !important;;
+    }
+
+
+
+}
+
+.inner {
+  max-width: 1000px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 6px;
+  margin-bottom: 50px;
+}
+
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  top: -70px;  
+  height: 75px;
+}
+#fixed-header {
+  transition: .5s; /* アニメーションタイミング */
+}
+#fixed-header.is-show {
+  top: 0;
+}
+
+
+
+.header-flex {
+  // display: none;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 50px;
+  align-items: center;
+  background: #fff;
+
+
+}
+
+.header__logo {}
+
+.header__logo a {
+  transition: all  0.3s ease;
+  &:hover {
+    opacity: 0.7;
+  }
+ 
+}
+
+.header__logo a img {
+  width: 160px;
+  padding-block: 20px;
+}
+
+.header-nav {
+  display: none;
+  @include mq(lg) {
+    display: block;
+  }
+
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-item {
+  transition: all  0.3s ease;
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+   
+  }
+}
+
+
+#fixed-header {
+  position: fixed;
+  top: -70px;  
+
+  transition: .5s; /* アニメーションタイミング */
+}
+#fixed-header.is-show {
+  top: 0;
+}
+
+
+.header__open {
+  margin-left: auto;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+
+  @include mq(lg) {
+    display: none;
+  }
+}
+
+.drawer-icon {
+  position: relative;
+  width: 32px;
+  height: 27px;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% + 20px);
+    // 高さ
+    height: 75px;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+}
+
+.drawer-icon.is-checked {
+  & .drawer-icon__bar:nth-of-type(1) {
+    top: 10px;
+    width: 100%;
+    transform: rotate(45deg);
+  }
+
+  & .drawer-icon__bar:nth-of-type(2) {
+    display: none;
+  }
+
+  & .drawer-icon__bar:nth-of-type(3) {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+}
+
+.drawer-icon__bar {
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 6px;
+  transition: transform 0.3s linear, top 0.3s linear;
+
+
+  &:nth-of-type(1) {
+    top: 0;
+    left: 0;
+    background: #000;
+  }
+
+  &:nth-of-type(2) {
+    top: 50%;
+    background: #000;
+    transform: translateY(-50%);
+  }
+
+  &:nth-of-type(3) {
+    bottom: 0;
+    background: #000;
+  }
+}
+
+.drawer-content {
+  position: fixed;
+
+  // 高さ変更
+  top: 75px;
+  left: 0;
+  z-index: 100;
+  display: none;
+  width: 100%;
+  // 高さ変更
+  height: calc(100dvh - 75px); 
+  padding-top: 59px;
+  padding-bottom: 60px;
+  overflow-y: auto;
+  background: #fff;
+  color: #000;
+
+  @include mq(lg) {
+    display: none !important;
+  }
+}
+
+.drawer-content__menu {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.drawer-content__link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.572;
+  text-align: center;
+ transition: all  0.3s ease;
+
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+}
+
+.drawer-content__link   img{
+  width: 25px;
+}
+
+.drawer-content__button {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+.fv {
+  position: relative;
+  z-index: 20;
+  height: 100vh;
+  max-width: 1000px;
+  width: 100%;
+  margin-inline: auto ;
+  display: flex;
+  justify-content: center; /* 水平方向中央 */
+  align-items: center; /* 垂直方向中央 */
+  padding-bottom: 0px;
+  img {
+    position: absolute;
+    z-index: 20;
+  }
+}
+
+
+.news {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.news__list {
+}
+
+.news__item {
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-block: 15px;
+  border-bottom: 1px solid;
+  gap: 10px;
+  @include mq(sm) {
+    gap: 30px;
+  }
+  &:first-child {
+    border-top: 1px solid;
+  }
+
+  
+}
+
+.news__date {
+
+
+
+ 
+}
+
+.news__date a {
+  transition: all  0.3s ease;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.news__title {
+
+
+}
+
+.news__text a {
+  transition: all  0.3s ease;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.about {
+    padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.about__container {
+  width: 100%;
+  max-width: 730px;
+  margin-inline: auto;
+
+}
+
+.about__text {
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.live-act {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.live-act__place {}
+
+.live-act__flex-date {
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  @include mq(md) {
+      flex-direction: row;
+      margin-bottom: 70px;
+        justify-content: center;
+        gap: 100px;
+  }
+}
+
+.live-act__btn {
+  
+  width: 100%;
+  max-width: 300px;
+}
+
+.live-act__btn a {
+  display: block;
+  padding-block: 10px;
+  font-size: 20px;
+
+  color: #fff;
+  background: #ff931e;
+  border-radius: 100vh;
+  text-align: center;
+  transition: all  0.3s ease;
+  &:hover {
+    background: #009245;
+    color: #000;
+    opacity: 0.7;
+  }
+}
+
+
+.live-act__date {
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding-top: 80px;
+}
+
+.live-act__date::before,
+.live-act__date::after {
+  content: "";
+  width: 100px;
+  border-bottom: 2px solid #000; 
+  margin: 0 50px; 
+  @include mq(md) {
+    width: 200px;
+  }
+}
+
+
+
+.live-act__cards {
+  max-width: 400px;
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr ;
+  gap: 50px;
+  @include mq(md) {
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.live-act__cards1 {
+  margin-bottom: 50px;
+}
+
+.live-act__card {
+  img {}
+}
+
+.tickets {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.tickets__span1 {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.tickets__span2 {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 80px;
+}
+
+.tickets__btns {}
+
+.tickets__flex {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 60px;
+  justify-content: center;
+  @include mq(md) {
+    grid-template-columns: auto auto;
+  }
+}
+
+.tickets__btn {}
+
+
+// .btn,
+a.btn
+// button.btn 
+{
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+
+}
+
+a.btn-flat {
+  overflow: hidden;
+  width: 250px;
+  padding: 15px;
+  color: #fff;
+  border-radius: 100vh;
+  background: #000;
+  border: none;
+  border: 2px solid #000;
+  &:hover {
+    color: #000;
+    border: 2px solid #000;
+  }
+}
+
+a.btn-flat span {
+  position: relative;
+}
+
+
+a.btn-flat.c1:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 150%;
+  height: 500%;
+
+  content: "";
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateX(20%) translateY(-25%) rotate(45deg);
+  transform: translateX(-90%) translateY(-25%) rotate(45deg);
+ 
+
+  background: #00b7ee;
+}
+a.btn-flat.c2:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 150%;
+  height: 500%;
+
+  content: "";
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateX(20%) translateY(-25%) rotate(45deg);
+  transform: translateX(-90%) translateY(-25%) rotate(45deg);
+
+  background: #fff100;
+}
+a.btn-flat.c3:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 150%;
+  height: 500%;
+
+  content: "";
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateX(20%) translateY(-25%) rotate(45deg);
+  transform: translateX(-90%) translateY(-25%) rotate(45deg);background: #009245;
+}
+
+a.btn-flat.c4:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 150%;
+  height: 500%;
+
+  content: "";
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateX(20%) translateY(-25%) rotate(45deg);
+  transform: translateX(-90%) translateY(-25%) rotate(45deg);
+
+  background: #ff931e;
+}
+
+a.btn-flat:hover:before {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  
+}
+
+
+
+
+.access {
+  padding-bottom: 100px;
+  padding-top: 100px;
+
+}
+
+.access__map {}
+
+.access__map .map__iframe{
+  max-width: 100%;
+  width: 100%;
+  margin-inline: auto;
+}
+
+
+.sponsored  {
+  text-align: center;
+  padding-bottom: 150px;
+  position: relative;
+  @include mq(md) {
+    padding-bottom: 90px;
+  }
+}
+
+.sponsored__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sponsored__item {}
+
+.sponsored__span1 {
+  font-size:  18px;
+  font-weight: bold;
+  display: block;
+}
+
+.sponsored__span2 {
+  display: block;
+}
+
+.sponsored__span3 {
+  display: block;
+}
+
+.sponsored__top  {
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+   @include mq(md) {
+    right: 67px;
+    bottom: 210px;
+   }
+}
+
+.sponsored__top a {
+  transition: all  0.3s ease;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.sponsored__top a img {
+  width: 50px;
+  @include mq(md) {
+    width: 100px;
+  }
+}
+
+
+.sponsored__roll-logo {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  transition: all  0.3s ease;
+  @include mq(md) {
+    right: 40px;
+    bottom: 50px;
+  }
+  &:hover {
+    opacity: 0.7;
+    
+  }
+
+
+  img {
+    width: 75px;
+    animation: rotate 5s linear infinite; 
+    @include mq(md) {
+      width: 150px;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); 
+  }
+  to {
+    transform: rotate(360deg); 
+  }
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding-block: 10px;
+}
+
+.footer__copyright {
+  font-size: 12px;
+ 
+}
+
+
+
+.fluid {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 30px;
+  width: 40vh; /* 横幅 */
+  height: 40vh; /* 縦幅 */
+  background: #fff100; /* 背景色 */
+  opacity: 0.8;
+  animation: fluidrotate 10s ease-in-out 0s infinite, fluidmove 40s linear 0s infinite; /* アニメーションの設定 */
+}
+
+.fluid-blue {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50px;
+  width: 30vh; /* 横幅 */
+  height: 30vh; /* 縦幅 */
+  background: #add8e6; /* 薄い水色 */
+  opacity: 0.8;
+  animation: fluidrotateblue 15s ease-in-out 0s infinite, fluidmoveblue 30s linear 0s infinite; /* アニメーションの設定 */
+}
+
+.fluid-green {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 70px;
+  width: 35vh; /* 横幅 */
+  height: 35vh; /* 縦幅 */
+  background: #99cc00; /* 濃い緑色 */
+  opacity: 0.8;
+  animation: fluidrotategreen 20s ease-in-out 0s infinite, fluidmovegreen 34s linear 0s infinite; /* アニメーションの設定 */
+}
+
+@keyframes fluidrotate {
+  0%, 100% {
+    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+}
+14% {
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+}
+28% {
+    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+}
+42% {
+    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+}
+56% {
+    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+}
+70% {
+    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+}
+84% {
+    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+}
+	  
+}
+
+
+@keyframes fluidmove {
+  0% {
+    top: 0;
+    left: 20px;
+  }
+  25% {
+    top: 20vh;
+    left: 50vh;
+  }
+  50% {
+    top: 50vh;
+    left: 20vh;
+  }
+  75% {
+    top: 100vh;
+    left: 70vh;
+  }
+  100% {
+    top: 0;
+    left: 30px;
+  }
+}
+
+@keyframes fluidrotateblue {
+  0%, 100% {
+    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+}
+14% {
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+}
+28% {
+    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+}
+42% {
+    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+}
+56% {
+    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+}
+70% {
+    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+}
+84% {
+    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+}
+}
+
+@keyframes fluidmoveblue {
+  0% {
+    top: 0;
+    left: 30px;
+  }
+  25% {
+    top: 50vh;
+    left: 30vh;
+  }
+  50% {
+    top: 30vh;
+    left: 60vh;
+  }
+  75% {
+    top: 100vh;
+    left: 80vh;
+  }
+  100% {
+    top: 0;
+    left: 30px;
+  }
+}
+
+@keyframes fluidrotategreen {
+  0%, 100% {
+    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+}
+14% {
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+}
+28% {
+    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+}
+42% {
+    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+}
+56% {
+    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+}
+70% {
+    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+}
+84% {
+    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+}
+}
+
+@keyframes fluidmovegreen {
+  0% {
+    top: 0;
+    left: 30px;
+  }
+  25% {
+    top: 70vh;
+    left: 20vh;
+  }
+  50% {
+    top: 20vh;
+    left: 100vh;
+  }
+  75% {
+    top: 60vh;
+    left: 40vh;
+  }
+  100% {
+    top: 0;
+    left: 30px;
+  }
+}
+
+
+
+.wave{
+  position:relative;
+/*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+  background:#fff;/*背景を塗りつぶして重ねた波を表現したい場合は、波を描画する親要素に波と同じ背景色を設定しましょう。*/
+  margin-bottom: 80px;
+  height: 100px;
+  @include mq(sm) {
+    height: 150px;
+}
+
+@include mq(md) {
+    height: 200px;
+}
+
+// @include mq(lg) {
+//   height:200px
+// }
+@include mq(xl) {
+  height: 250px;
+}
+  }
+  canvas{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  }
+
+  .wave2{
+    position:relative;
+
+    height:50px;/*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+    background:#fff;/*背景を塗りつぶして重ねた波を表現したい場合は、波を描画する親要素に波と同じ背景色を設定しましょう。*/
+
+    @include mq(sm) {
+        height: 70px;
+    }
+
+    @include mq(md) {
+        height: 100px;
+    }
+
+    @include mq(lg) {
+      height:200px
+    }
+    @include mq(xl) {
+      height: 250px;
+    }
+  
+    }
+
+
+    /*==================================================
+スタート時は要素自体を透過0にするためのopacity:0;を指定する
+===================================*/
+
+.box{
+	opacity: 0;
+}
+
+/*==================================================
+動かしたい動き（今回は” ふわっ” を採用）
+===================================*/
+
+.fadeUp {
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+
+
+// wp-news　
+.wp-news .wp-top {
+  text-align: center;
+}
+
+.wp-news .wp-top a {
+  transition: all  0.3s ease;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.wp-news .news__list {
+  margin-bottom: 40px;
+}
+
+.wp-news .wp-pagenation {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
