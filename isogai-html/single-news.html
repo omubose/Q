@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__flex">
+            <h1 class="header__logo">
+              <a href=""><img src="img/logo-w.png" alt="ロゴ" /></a>
+            </h1>
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item"><a href="#">お知らせ</a></li>
+                <li class="header__item"><a href="#">いそがいについて</a></li>
+                <li class="header__item"><a href="#">ご予約</a></li>
+                <li class="header__item"><a href="#">ブログ</a></li>
+                <li class="header__item"><a href="#">コンタクト</a></li>
+              </ul>
+            </nav>
+            <div class="header__open">
+              <button
+                type="button"
+                id="js-drawer-icon"
+                class="drawer-icon"
+                aria-label="メニューボタン"
+              >
+                <span class="drawer-icon__bar"></span>
+                <span class="drawer-icon__bar"></span>
+                <span class="drawer-icon__bar"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Drawer Content -->
+      <div id="js-drawer-content" class="drawer-content">
+        <nav
+          class="drawer-content__menu"
+          aria-label="ドロワーメニューナビゲーション"
+        >
+          <a href="#" class="drawer-content__link">お知らせ</a>
+          <a href="#" class="drawer-content__link">いそがいについて</a>
+          <a href="#" class="drawer-content__link">ご予約</a>
+          <a href="#" class="drawer-content__link">ブログ</a>
+          <a href="#" class="drawer-content__link">コンタクト</a>
+        </nav>
+      </div>
+
+      <section class="wp-single-news">
+        <div class="inner">
+          <div class="wp-single-news__container">
+            <div class="wp-single-news__logo-c">
+              <img src="img/logo-c.png" alt="" />
+            </div>
+            <h1 class="wp-section-title">◯月の定休日</h1>
+            <div class="wp-single-news__info">
+              <span>営業時間</span>
+              <span>00:00~00:00</span>
+              <span>(ラストオーダー00:00)</span>
+            </div>
+            <div class="wp-single-news__date">
+                  <p>0/0(◯)~０(◯)</p>
+                  <p>0/0(◯)~０(◯)</p>
+                  <p>0/0(◯)~０(◯)</p>
+                  <p>0/0(◯)~０(◯)</p>
+              <span class="wp-single-news__desc"
+                >※状況により店休日・営業時間が<br>変更となる可能性がございます。<br>
+                ご理解のほどよろしく<br class="br-md">お願いいたします。</span
+              >
+            </div>
+            <div class="wp-single-news__home"><a href="#">home</a></div>
+          </div>
+      </section>
+
+      <footer class="footer">
+        <div class="inner">
+          <ul class="footer__list">
+            <li class="footer__item footer__name">居酒屋　いそがい</li>
+            <li class="footer__item">〒0000-000</li>
+            <li class="footer__item">◯◯県◯◯市◯◯◯0-00 ◯◯ビル3F</li>
+            <li class="footer__item">TEL：000-000-0000</li>
+            <li class="footer__item footer__info">
+              <span>営業案内</span
+              ><img class="footer__img1" src="img/calendar-w.png" alt="" /><a
+                href="#"
+                ><img
+                  class="footer__img2"
+                  src="img/double-arrow-w.png"
+                  alt=""
+                /><span>お知らせ参照</span></a
+              >
+            </li>
+            <li class="footer__item footer__sns-flex">
+              <a href=""><img src="img/x-white.png" alt="" /></a>
+              <a href=""><img src="img/facebook-w.png" alt="" /></a>
+              <a href=""><img src="img/Instagram-w.png" alt="" /></a>
+            </li>
+          </ul>
+          <div class="footer__copyright">
+            <small>&copy; 居酒屋いそがい</small>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
