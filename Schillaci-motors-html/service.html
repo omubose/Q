@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schillaci motors</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__flex">
+            <h1 id="siteTitle" class="header__site-title">
+              <a href="">Schillaci motors</a>
+            </h1>
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item"><a href="#">About us</a></li>
+                <li class="header__item"><a href="#">Reason</a></li>
+                <li class="header__item"><a href="#">Service</a></li>
+                <li class="header__item"><a href="#">News</a></li>
+              </ul>
+            </nav>
+            <div class="header__open">
+              <button
+                type="button"
+                id="js-drawer-icon"
+                class="drawer-icon"
+                aria-label="メニューボタン"
+              >
+                <span class="drawer-icon__bar"></span>
+                <span class="drawer-icon__bar"></span>
+                <span class="drawer-icon__bar"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Drawer Content -->
+      <div id="js-drawer-content" class="drawer-content">
+        <nav
+          class="drawer-content__menu"
+          aria-label="ドロワーメニューナビゲーション"
+        >
+          <a href="#" class="drawer-content__link">Top</a>
+          <a href="#" class="drawer-content__link">About us</a>
+          <a href="#" class="drawer-content__link">Reason</a>
+          <a href="#" class="drawer-content__link">Service</a>
+          <a href="#" class="drawer-content__link">News</a>
+        </nav>
+      </div>
+
+      <section class="wp-about">
+        <div class="inner">
+          <div class="wp-logo-b"><img src="img/logo-b.png" alt="" /></div>
+          <div class="wp-about__container">
+            <h2 class="wp-title">
+              <span class="wp-title-en">Service</span>
+              <span class="wp-title-ja">サービス</span>
+            </h2>
+
+            <ul class="wp-about__list">
+              <li class="wp-about__item">
+                <h3 class="wp-about__item-title">1. 定期メンテナンスと <span class="wp-inline-b">点検</span></h3>
+                <p class="wp-about__item-text">
+                  オイル交換、フィルター交換、ブレーキチェックなど、車両の定期的な点検とメンテナンスを行い、車のパフォーマンスを最適化します。
+                </p>
+              </li>
+              <li class="wp-about__item">
+                <h3 class="wp-about__item-title">2. 高度な診断と修理</h3>
+                <p class="wp-about__item-text">
+                  最新の診断ツールを使用して車の問題を正確に特定し、迅速かつ効果的に修理を行います。
+                </p>
+              </li>
+              <li class="wp-about__item">
+                <h3 class="wp-about__item-title">
+                  3. エンジンおよび <span  class="wp-inline-b">トランスミッションの</span> <span  class="wp-inline-b">サービス</span>
+                </h3>
+                <p class="wp-about__item-text">
+                  エンジンの調整、トランスミッションの修理・交換など、車両の心臓部であるエンジンとトランスミッションに関する専門的なサービスを提供します。
+                </p>
+              </li>
+              <li class="wp-about__item">
+                <h3 class="wp-about__item-title">
+                  4. ブレーキおよび <span  class="wp-inline-b">サスペンションの修理</span>
+                </h3>
+                <p class="wp-about__item-text">
+                  ブレーキパッドやローターの交換、サスペンションの修理など、安全運転に欠かせない部品のメンテナンスと修理を行います。
+                </p>
+              </li>
+
+              <li class="wp-about__item">
+                <h3 class="wp-about__item-title">
+                  5. タイヤサービスおよび <span class=" class="wp-inline-b>アライメント</span> 
+                </h3>
+                <p class="wp-about__item-text">
+                  タイヤの交換、バランス調整、ホイールアライメントなど、タイヤに関する総合的なサービスを提供し、安全な走行をサポートします。
+                </p>
+              </li>
+            </ul>
+            <p class="wp-about__end-text">
+              これらのサービスを通じて、お客様の車両が常に最高の状態で運転できるようサポートしています。
+            </p>
+            <div class="wp-home">
+              <a href=""><img src="img/home.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="inner">
+          <div class="footer__flex">
+            <ul class="footer__list">
+              <li class="footer__item footer__title">Schillaci motors</li>
+              <li class="footer__item">〒000-0000</li>
+              <li class="footer__item">◯◯県◯◯市◯◯◯00-0-0</li>
+              <li class="footer__item">TEL 000-000-0000</li>
+            </ul>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item"><a href="">About us</a></li>
+              <li class="footer__nav-item"><a href="">Reason</a></li>
+              <li class="footer__nav-item"><a href="">Service</a></li>
+              <li class="footer__nav-item"><a href="">News</a></li>
+            </ul>
+          </div>
+          <div class="footer__copyright">
+            <small>&copy; Schillaci motors</small>
+          </div>
+        </div>
+
+        <div class="footer__top">
+          <a href="#"><img src="./img/top1.png" alt="" /></a>
+        </div>
+        <div class="footer__top">
+          <a href="#"><img src="./img/top2.png" alt="" /></a>
+        </div>
+        <div class="footer__top">
+          <a href="#"><img src="./img/top3.png" alt="" /></a>
+        </div>
+      </footer>
+
+      <!-- wrap -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
