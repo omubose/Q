@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/9-6-3.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__flex">
+            <h1 class="header__logo">
+              <a href="#"><img src="./img/logo.png" alt="社名ロゴ" /></a>
+            </h1>
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item"><a href="#">News</a></li>
+                <li class="header__item"><a href="#">About</a></li>
+                <li class="header__item"><a href="#">Service</a></li>
+                <li class="header__item"><a href="#shop">Shop</a></li>
+                <li class="header__item"><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="header__open">
+              <button
+                type="button"
+                id="js-drawer-icon"
+                class="drawer-icon"
+                aria-label="メニューボタン"
+              >
+                <span class="drawer-icon__bar"></span>
+                <span class="drawer-icon__bar"></span>
+                <span class="drawer-icon__bar"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Drawer Content -->
+      <div id="js-drawer-content" class="drawer-content">
+        <nav
+          class="drawer-content__menu"
+          aria-label="ドロワーメニューナビゲーション"
+        >
+          <a href="#" class="drawer-content__link">News</a>
+          <a href="#" class="drawer-content__link">About</a>
+          <a href="#" class="drawer-content__link">Service</a>
+          <a href="#shop" class="drawer-content__link">Shop</a>
+          <a href="#" class="drawer-content__link">Contact</a>
+        </nav>
+      </div>
+
+      <section class="wp-about">
+        <div class="inner wp-about__inner">
+        <h1 class="wp-about__section-title">About</h1>
+        <span class="wp-about__desc" >Zenga Stylesの特色</span>
+        <div class="wp-about__container">
+          <ul class="wp-about__list">
+            <li class="wp-about__item">
+              <h3 class="wp-about__sub-title"><span>01</span><br class="br-md"> 卓越したデザインと <br class="br-sm"> 品質</h3>
+              <p class="wp-about__text">Zenga Stylesは、イタリアの伝統的なデザインと現代的なエレガンスを組み合わせたアパレル製品を提供しています。厳選された素材と熟練の職人技により、最高品質のアイテムが生み出されています。</p>
+            </li>
+            <li class="wp-about__item">
+              <h3 class="wp-about__sub-title"><span>02</span> <br class="br-md"> オーダーメイドの <br class="br-sm"> エクスペリエンス</h3>
+              <p class="wp-about__text">お客様一人ひとりのニーズに合わせたオーダーメイドサービスを提供しています。専門のデザイナーが直接お客様と対話し、個別のスタイルとフィット感を実現する唯一無二のアイテムを制作します。</p>
+            </li>
+            <li class="wp-about__item">
+              <h3 class="wp-about__sub-title"><span>03</span><br class="br-md">グローバルな <br class="br-sm"> プレゼンス</h3>
+              <p class="wp-about__text">Zenga Stylesは、世界中のファッション市場に向けてブランドを展開しています。オンラインストアや国際的なファッションイベントを通じて、グローバルな顧客基盤を拡大しています。</p>
+            </li>
+            <li class="wp-about__item">
+              <h3 class="wp-about__sub-title"><span>04</span><br class="br-md">持続可能な <br class="br-sm"> ファッション</h3>
+              <p class="wp-about__text">環境に配慮した持続可能な素材の使用とエシカルな生産プロセスに取り組んでいます。Zenga Stylesの製品は、地球と人々に優しいファッションを目指しています。</p>
+            </li>
+            <li class="wp-about__item">
+              <h3 class="wp-about__sub-title"><span>05</span><br class="br-md">イタリアの <br class="br-sm"> 伝統と革新</h3>
+              <p class="wp-about__text">イタリアの伝統的な手工芸技術を大切にしながらも、最新のファッショントレンドとテクノロジーを取り入れた革新的なデザインを提供しています。</p>
+            </li>
+            <li class="wp-about__item">
+              <h3 class="wp-about__sub-title"><span>06</span><br class="br-md">多様なスタイルと <br class="br-sm"> アイテム</h3>
+              <p class="wp-about__text">フォーマルからカジュアルまで、幅広いスタイルとアイテムを展開しています。どのようなシーンにも対応できる多彩なコレクションを取り揃え、お客様の多様なニーズに応えます。</p>
+            </li>
+            <li class="wp-about__end-desc">Zenga Stylesは、洗練されたデザインと高品質な製品を通じて、あなたのファッションライフを豊かにすることをお約束します。</li>
+            <li class="wp-about__home"><a href="#">home</a></li>
+          </ul>
+        
+
+        </div>
+
+      </div>
+      </section>
+
+      <footer id="footer" class="footer">
+        <div class="fluid7"></div>
+        <div class="inner">
+          <div class="footer__flex">
+            <div class="flex__left">
+              <div class="footer__logo-blue">
+                <a href="#"><img src="./img/logo-blue.png" alt="" /></a>
+              </div>
+              <ul class="footer__item">
+                <li class="footer__list">〒000-0000</li>
+                <li class="footer__list">東京都〇〇区〇〇町0-00 〇〇〇ビル</li>
+                <li class="footer__list">
+                  TEL 00-0000-0000 <br class="br-md" />
+                  受付時間 10:00～17:00）
+                </li>
+              </ul>
+            </div>
+            <div class="flex__right">
+              <div class="footer__nav">
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item"><a href="">News</a></li>
+                  <li class="footer__nav-item"><a href="">About</a></li>
+                  <li class="footer__nav-item"><a href="">Service</a></li>
+                  <li class="footer__nav-item"><a href="#shop">Shop</a></li>
+                  <li class="footer__nav-item"><a href="">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright">
+            <small>&copy; zenga styles</small>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
