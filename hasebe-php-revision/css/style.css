@@ -1,0 +1,1646 @@
+@charset "UTF-8";
+/* 日本語 */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+body.is-fixed {
+  overflow: hidden;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+  padding-inline: 30px;
+}
+
+#wrap {
+  max-width: 100vw;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 600px) {
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.btn a {
+  display: inline-block;
+  padding-block: 8px;
+  color: #1A419B;
+  border: 1px solid #1A419B;
+  min-width: 150px;
+  text-align: center;
+  border-radius: 100vh;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn a:hover {
+  color: #fff;
+  background: #1A419B;
+}
+
+.br-inline {
+  display: inline-block;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  z-index: 100;
+  height: 100vh;
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .header {
+    display: block;
+  }
+}
+
+.header.scroll-header {
+  border-right: 1px solid #F8F8F8;
+}
+
+.header.black {
+  border-right: 1px solid #F8F8F8;
+}
+
+.header__logo {
+  padding: 60px 20px 40px 20px;
+}
+
+.header__logo a {
+  display: block;
+  background-image: url("../img/logo-w.png");
+  background-size: cover;
+  background-position: center;
+  width: 180px;
+  height: 56px;
+}
+
+.header__logo a.b {
+  background-image: url("../img/logo-b.png");
+}
+
+.header__logo a.scroll-logo {
+  background-image: url("../img/logo-b.png");
+}
+
+.header__list-flex {
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+.header__list-flex.b {
+  color: #000;
+}
+
+.header__list-flex.scroll-nav {
+  color: #000;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  letter-spacing: 0.05em;
+}
+
+.header__item a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__item a:hover {
+  opacity: 0.6;
+}
+
+.header__contact {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.header__contact-tel {
+  background: #000;
+  height: 80px;
+  padding-block: 27.5px;
+  padding-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  gap: 10px;
+}
+
+.header__contact-tel img {
+  width: 25px;
+}
+
+.header__contact-mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  color: #fff;
+  background: #1A419B;
+  height: 80px;
+  padding-block: 27.5px;
+  padding-left: 30px;
+}
+
+.header__contact-mail img {
+  width: 25px;
+}
+
+.header__contact-mail span a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__contact-mail span a:hover {
+  opacity: 0.6;
+}
+
+.header__open {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: auto;
+  line-height: 0;
+  z-index: 200;
+}
+@media screen and (min-width: 900px) {
+  .header__open {
+    display: none;
+  }
+}
+
+.drawer-icon {
+  position: relative;
+  width: 32px;
+  height: 27px;
+}
+.drawer-icon::after {
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 20px);
+  height: 48px;
+  content: "";
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.drawer-icon.is-checked::after {
+  background: #1A419B;
+}
+.drawer-icon.is-checked .drawer-icon__bar:nth-of-type(1) {
+  top: 10px;
+  width: 100%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #fff;
+}
+.drawer-icon.is-checked .drawer-icon__bar:nth-of-type(2) {
+  display: none;
+}
+.drawer-icon.is-checked .drawer-icon__bar:nth-of-type(3) {
+  top: 10px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-color: #fff;
+}
+
+.drawer-icon__bar {
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 3px;
+  background-color: #1A419B;
+  border-radius: 6px;
+  -webkit-transition: top 0.3s linear, -webkit-transform 0.3s linear;
+  transition: top 0.3s linear, -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear, top 0.3s linear;
+  transition: transform 0.3s linear, top 0.3s linear, -webkit-transform 0.3s linear;
+  z-index: 200;
+}
+.drawer-icon__bar:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  background: #1A419B;
+}
+.drawer-icon__bar:nth-of-type(2) {
+  top: 50%;
+  background: #1A419B;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.drawer-icon__bar:nth-of-type(3) {
+  bottom: 0;
+  background: #1A419B;
+}
+
+.drawer-content {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 100;
+  display: none;
+  width: 100%;
+  height: 100dvh;
+  padding-top: 59px;
+  padding-bottom: 60px;
+  overflow-y: auto;
+  background: #1A419B;
+  color: #fff;
+}
+@media screen and (min-width: 900px) {
+  .drawer-content {
+    display: none !important;
+  }
+}
+
+.drawer-content__menu {
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.drawer-content__link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.572;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.drawer-content__link:hover {
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 900px) {
+  .mv {
+    padding-right: 320px;
+  }
+}
+
+#slider {
+  width: 100%;
+  height: 100vh; /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+.concept {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .concept {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    z-index: 1;
+  }
+}
+
+.concept__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 24px;
+  margin-top: 50px;
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+
+.concept__title div {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-weight: bold;
+}
+
+.concept__img {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 50px;
+}
+
+.concept__img img {
+  width: 170px;
+}
+
+.concept-hor {
+  display: block;
+  padding-top: 150px;
+}
+@media screen and (min-width: 900px) {
+  .concept-hor {
+    display: none;
+  }
+}
+
+.concept-hor__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+@media screen and (min-width: 600px) {
+  .concept-hor__flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 150px;
+  }
+}
+
+.concept-hor__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media screen and (min-width: 600px) {
+  .concept-hor__title {
+    font-size: 24px;
+  }
+}
+
+.concept-hor__title span {
+  font-weight: bold;
+}
+
+.concept-hor__img img {
+  width: 120px;
+}
+
+@media screen and (min-width: 900px) {
+  .section-container {
+    padding-left: 220px;
+  }
+}
+
+.about {
+  padding-top: 100px;
+}
+@media screen and (min-width: 600px) {
+  .about {
+    padding-top: 200px;
+  }
+}
+
+.about__img {
+  margin-bottom: 40px;
+}
+
+.about__img img {
+  width: 600px;
+}
+
+.about__text {
+  margin-bottom: 60px;
+  line-height: 2;
+}
+@media screen and (min-width: 600px) {
+  .about__text {
+    line-height: 3;
+  }
+}
+
+/*==================================================
+ふわっ
+===================================*/
+/* fadeUp */
+.fadeUp {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.fadeUpTrigger {
+  opacity: 0;
+}
+
+.slider-container {
+  padding-block: 150px;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider img {
+  width: 100%; /*スライダー内の画像を横幅100%に*/
+  height: auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+.slider .slick-slide {
+  margin: 0 5px; /*スライド左右の余白調整*/
+}
+
+.news {
+  padding-bottom: 200px;
+}
+
+.news__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.news__time {
+  display: block;
+  font-size: 14px;
+  color: #1A419B;
+}
+
+/* 右へ */
+.flipRight {
+  -webkit-animation-name: flipRightAnime;
+          animation-name: flipRightAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-perspective-origin: right center;
+          perspective-origin: right center;
+  opacity: 0;
+}
+
+@-webkit-keyframes flipRightAnime {
+  from {
+    -webkit-transform: perspective(600px) translate3d(0, 0, 0) rotateY(-30deg);
+            transform: perspective(600px) translate3d(0, 0, 0) rotateY(-30deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+            transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipRightAnime {
+  from {
+    -webkit-transform: perspective(600px) translate3d(0, 0, 0) rotateY(-30deg);
+            transform: perspective(600px) translate3d(0, 0, 0) rotateY(-30deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+            transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.flipRightTrigger {
+  opacity: 0;
+}
+
+/*==================================================
+　5-3-3 左から右に線が伸びる（下部）
+===================================*/
+.gnavi li a {
+  /*線の基点とするためrelativeを指定*/
+  position: relative;
+}
+
+.gnavi li.current a,
+.gnavi li a:hover {
+  color: #1A419B;
+}
+
+.gnavi li a::after {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  /*線の形状*/
+  width: 100%;
+  height: 1px;
+  background: #1A419B;
+  /*アニメーションの指定*/
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1); /*X方向0、Y方向1*/
+  -webkit-transform-origin: left top;
+          transform-origin: left top; /*左上基点*/
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1); /*X方向にスケール拡大*/
+}
+
+.works {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #F8F8F8;
+}
+@media screen and (min-width: 768px) {
+  .works {
+    padding-bottom: 200px;
+  }
+}
+
+.works__list {
+  margin-bottom: 60px;
+}
+
+.works__list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 100px;
+}
+@media screen and (min-width: 768px) {
+  .works__list div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.works___img {
+  margin-bottom: 8px;
+}
+
+.works___img a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.works___img a:hover {
+  opacity: 0.6;
+}
+
+.works__content-title a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.works__content-title a:hover {
+  opacity: 0.6;
+}
+
+/* 右上へ */
+.flipRightTop {
+  -webkit-animation-name: flipRightTopAnime;
+          animation-name: flipRightTopAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes flipRightTopAnime {
+  from {
+    -webkit-transform: translate(-20px, 80px) rotate(25deg);
+            transform: translate(-20px, 80px) rotate(25deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0, 1) rotate(0deg);
+            transform: translate(0, 1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipRightTopAnime {
+  from {
+    -webkit-transform: translate(-20px, 80px) rotate(25deg);
+            transform: translate(-20px, 80px) rotate(25deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0, 1) rotate(0deg);
+            transform: translate(0, 1) rotate(0deg);
+    opacity: 1;
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.flipRightTopTrigger {
+  opacity: 0;
+}
+
+.strong-field {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.strong-field__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 100px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .strong-field__list {
+    grid-template-columns: auto auto auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 100px;
+    margin-bottom: 60px;
+  }
+}
+
+.strong-field__item {
+  text-align: center;
+}
+
+.strong-field__item a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.strong-field__item a:hover {
+  opacity: 0.6;
+}
+
+.strong-field__item a img {
+  width: 235px;
+  border-radius: 100vh;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.strong-field__item span {
+  display: block;
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .strong-field__item span {
+    display: inline-block;
+  }
+}
+
+/*==================================================
+スタート時は要素自体を透過0にするためのopacity:0;を指定する
+===================================*/
+.box {
+  opacity: 0;
+}
+
+/*==================================================
+動かしたい動き（今回は” ふわっ” を採用）
+===================================*/
+.fadeUp {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*全て共通：hideエリアをはじめは非表示*/
+.hide-area {
+  display: none;
+}
+
+/*全て共通：モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ccc;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+.footer {
+  background: #F8F8F8;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.footer__inner {
+  padding-inline: 30px;
+}
+
+.footer__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  .footer__flex {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer__list {
+  margin-bottom: 20px;
+}
+
+.footer__list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__logo img {
+  width: 130px;
+  margin-bottom: 20px;
+}
+
+.footer__logo-house img {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .footer__logo-house img {
+    width: 130px;
+    display: block;
+  }
+}
+
+.footer__copyright {
+  text-align: center;
+}
+
+.wp-section-title {
+  font-size: 30px;
+  color: #1A419B;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
+}
+
+.wp-section-title span {
+  font-weight: bold;
+}
+
+.wp-page-about {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  line-height: 3;
+}
+
+.wp-page-about__inner {
+  max-width: 500px;
+}
+@media screen and (min-width: 900px) {
+  .wp-page-about__inner {
+    width: 100%;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 30px;
+  }
+}
+
+.wp-page-about__img {
+  margin-bottom: 50px;
+}
+
+.wp-page-about__img img {
+  height: 50vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wp-page-about__text {
+  padding-bottom: 40px;
+}
+.wp-page-about__text:last-of-type {
+  padding-bottom: 90px;
+}
+
+/*========= 流れるテキスト ===============*/
+/*全共通*/
+.slide-in {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.slide-in_inner {
+  display: inline-block;
+}
+
+/*左右のアニメーション*/
+.leftAnime {
+  opacity: 0; /*事前に透過0にして消しておく*/
+}
+
+.slideAnimeLeftRight {
+  -webkit-animation-name: slideTextX100;
+          animation-name: slideTextX100;
+  -webkit-animation-duration: 3.8s;
+          animation-duration: 3.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes slideTextX100 {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); /*要素を左の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+@keyframes slideTextX100 {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); /*要素を左の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+.slideAnimeRightLeft {
+  -webkit-animation-name: slideTextX-100;
+          animation-name: slideTextX-100;
+  -webkit-animation-duration: 3.8s;
+          animation-duration: 3.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes slideTextX-100 {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); /*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+@keyframes slideTextX-100 {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); /*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+/*========= 画面遷移のためのCSS ===============*/
+/* 画面遷移アニメーション */
+.splashbg {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  background-color: #1A419B; /* 伸びる背景色の設定 */
+  -webkit-animation-name: PageAnime;
+          animation-name: PageAnime;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/* bodyにappearクラスがついたらsplashbgをアニメーション開始 */
+body.appear .splashbg {
+  display: block;
+}
+
+@-webkit-keyframes PageAnime {
+  0% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  50% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  50.001% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  100% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+@keyframes PageAnime {
+  0% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  50% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  50.001% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  100% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+/* 画像の初期状態 */
+.animate-img {
+  opacity: 0; /* はじめは透過0に */
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out; /* 不透明度の変化にトランジションを追加 */
+}
+
+/* アニメーション終了後に画像を表示 */
+body.appear .animate-img {
+  opacity: 1;
+}
+
+/* コンテナの設定 */
+.wp-believe__img1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.wp-archive {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.wp-archive__inner {
+  max-width: 500px;
+}
+@media screen and (min-width: 900px) {
+  .wp-archive__inner {
+    max-width: 1000px;
+  }
+}
+
+.wp-archive__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 1200px) {
+  .wp-archive__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 0px;
+  }
+}
+
+.wp-archive__main {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 1200px) {
+  .wp-archive__main {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+}
+
+.wp-archive__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 130px;
+  padding-top: 50px;
+  margin-bottom: 80px;
+  width: 100%;
+  max-width: 500px;
+  margin-inline: auto;
+}
+@media screen and (min-width: 900px) {
+  .wp-archive__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: none;
+    gap: 30px;
+    padding-top: 80px;
+  }
+}
+
+.wp-archive__img {
+  margin-bottom: 10px;
+}
+
+.wp-archive__img a img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wp-archive__time {
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.wp-archive__text {
+  line-height: 1.2;
+}
+
+.wp-archive-page-nation {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.wp-pagenavi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-bottom: 50px;
+}
+
+.wp-archive__page-nation .page {
+  padding: 8px;
+  border: none;
+  margin: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.wp-archive__page-nation .pages {
+  margin-right: 20px;
+  border: none;
+}
+
+.wp-archive__page-nation .current {
+  color: #fff;
+  background: #1A419B;
+  border: none;
+  padding: 8px;
+  margin: 0;
+  display: block;
+}
+
+.wp-archive__page-nation .extend {
+  border: none;
+}
+
+.wp-archive__page-nation .previouspostslink {
+  border: none;
+}
+
+.wp-archive__page-nation .nextpostslink {
+  border: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .aside {
+    width: 23%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+.aside-container {
+  background: #F8F8F8;
+  padding: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin-inline: auto;
+  min-width: 160px;
+}
+@media screen and (min-width: 1200px) {
+  .aside-container {
+    margin-top: 80px;
+  }
+}
+
+.aside-title {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin-bottom: 8px;
+}
+
+.aside-category__item a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.aside-category__item a:hover {
+  opacity: 0.6;
+}
+
+.aside-category__item {
+  margin-bottom: 10px;
+}
+
+.wp-archive .btn {
+  display: block;
+  text-align: center;
+}
+/*==================================================
+シャッ（背景色が伸びて出現）
+===================================*/
+/*背景色が伸びて出現（共通）*/
+.bgextend {
+  -webkit-animation-name: bgextendAnimeBase;
+          animation-name: bgextendAnimeBase;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  position: relative;
+  overflow: hidden; /*　はみ出た色要素を隠す　*/
+  opacity: 0;
+}
+
+@-webkit-keyframes bgextendAnimeBase {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bgextendAnimeBase {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*中の要素*/
+.bgappear {
+  -webkit-animation-name: bgextendAnimeSecond;
+          animation-name: bgextendAnimeSecond;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes bgextendAnimeSecond {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bgextendAnimeSecond {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*左から*/
+.bgLRextend::before {
+  -webkit-animation-name: bgLRextendAnime;
+          animation-name: bgLRextendAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1A419B; /*伸びる背景色の設定*/
+}
+
+@-webkit-keyframes bgLRextendAnime {
+  0% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  50% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  50.001% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  100% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+@keyframes bgLRextendAnime {
+  0% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  50% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  50.001% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  100% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+/*右から*/
+.bgRLextend::before {
+  -webkit-animation-name: bgRLextendAnime;
+          animation-name: bgRLextendAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1A419B; /*伸びる背景色の設定*/
+}
+
+@-webkit-keyframes bgRLextendAnime {
+  0% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  50% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  50.001% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+  100% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+@keyframes bgRLextendAnime {
+  0% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  50% {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  50.001% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+  100% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.bgappearTrigger,
+.bgUDextendTrigger,
+.bgDUextendTrigger,
+.bgRLextendTrigger,
+.bgLRextendTrigger {
+  opacity: 0;
+}
+
+.wp-single {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.wp-single__inner {
+  max-width: 500px;
+}
+@media screen and (min-width: 900px) {
+  .wp-single__inner {
+    max-width: 1000px;
+  }
+}
+
+.wp-single__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 1200px) {
+  .wp-single__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 0px;
+  }
+}
+
+.wp-single__main {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 1200px) {
+  .wp-single__main {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+}
+
+.wp-single__list {
+  padding-top: 50px;
+  margin-bottom: 80px;
+  width: 100%;
+  max-width: 500px;
+  margin-inline: auto;
+}
+@media screen and (min-width: 900px) {
+  .wp-single__list {
+    max-width: none;
+    gap: 30px;
+    padding-top: 80px;
+  }
+}
+
+.wp-single__img {
+  margin-bottom: 10px;
+}
+
+.wp-single__img a img {
+  width: 100%;
+  height: auto;
+}
+
+.wp-single__time {
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.wp-single__text {
+  line-height: 1.2;
+}
+
+.wp-single__page-nation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+.wp-single__page-nation a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wp-single__page-nation a:hover {
+  opacity: 0.6;
+}
+
+.wp-single .btn.single {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.wp-single .btn {
+  display: block;
+  text-align: center;
+}
