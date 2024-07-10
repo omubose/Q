@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OKANO</title>
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/favicon.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__flex">
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item"><a href="#">OUR MISSION</a></li>
+                <li class="header__item"><a href="#">SERVICE</a></li>
+                <li class="header__item"><a href="#">NEWS</a></li>
+                <li class="header__item"><a href="#">BLOG</a></li>
+                <li class="header__item"><a href="#">CONTACT</a></li>
+              </ul>
+              <h1 class="header__logo">
+                <a href="">CHINESE RESTAURANT　OKANO</a>
+              </h1>
+            </nav>
+            <div class="header__open">
+              <button
+                type="button"
+                id="js-drawer-icon"
+                class="drawer-icon"
+                aria-label="メニューボタン"
+              >
+                <span class="drawer-icon__bar"></span>
+                <span class="drawer-icon__bar"></span>
+                <span class="drawer-icon__bar"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Drawer Content -->
+      <div id="js-drawer-content" class="drawer-content">
+        <nav
+          class="drawer-content__menu"
+          aria-label="ドロワーメニューナビゲーション"
+        >
+          <a href="#" class="drawer-content__link">OUR MISSION</a>
+          <a href="#" class="drawer-content__link">SERVICE</a>
+          <a href="#" class="drawer-content__link">NEWS</a>
+          <a href="#" class="drawer-content__link">BLOG</a>
+          <a href="#" class="drawer-content__link">CONTACT</a>
+        </nav>
+      </div>
+
+      <section class="wp-mission">
+        <div class="inner">
+          <h1 class="wp-section-title">
+            <span class="slide-in leftAnime">
+              <span class="slide-in_inner leftAnimeInner">OUR MISSION</span>
+            </span>
+          </h1>
+          <h3 class="wp-mission__title">
+            中華料理で <br />驚きと感動を<span class="br-inline">提供する</span>
+          </h3>
+          <p class="wp-mission__text">
+            私たちは、<br />
+            お客様に最高の中華料理体験を<br />
+            提供することを使命としています。<br />伝統と革新を融合させた料理で、<span
+              class="br-inline"
+              >驚きと感動をお届けします。</span
+            >
+          </p>
+          <p class="wp-mission__text">
+            中華料理の魅力は、その奥深さと多様性にあります。<br />私たちの料理は、厳選された新鮮な食材を使用し、シェフが心を込めて一皿一皿丁寧に作り上げます。<br />伝統的な調理法を守りつつ、現代のエッセンスを取り入れた創作料理もご用意しております。<br />季節ごとに変わるメニューは、訪れるたびに新しい発見と楽しみを提供します。<br />また、お客様一人ひとりの嗜好に合わせたカスタマイズも可能です。<br />特別な日のディナーや、家族や友人とのお祝いの席でも、心に残るひとときをお過ごしいただけます。<br />私たちは、料理を通じてお客様との絆を深め、笑顔と満足をお届けすることを目指しています。<br />皆様のご来店を心よりお待ちしております。
+          </p>
+
+
+          <div class="more more-mission">
+            <a href="">HOME <img src="img/arrow.png" alt="" /></a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="inner">
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item footer__title">
+                <a href="">CHINESE RESTAURANT　OKANO</a>
+              </li>
+              <li class="footer__item"><a href="">OUR MISSION</a></li>
+              <li class="footer__item"><a href="">SERVICE</a></li>
+              <li class="footer__item"><a href="">NEWS</a></li>
+              <li class="footer__item"><a href="">BLOG</a></li>
+              <li class="footer__item"><a href="">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+
+      <!-- wrap -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
