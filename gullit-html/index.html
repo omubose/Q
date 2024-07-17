@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="header__logo-p">
+        <img src="img/logo-p.png " alt="" /><span class="TextRandomAnime"
+          >Wings to Your World!</span
+        >
+      </div>
+      <header id="header" class="header">
+        <div class="header__inner">
+          <div class="header__flex">
+            <h1 class="header__logo">
+              <a href="">Gullit</a>
+            </h1>
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item"><a href="#">News</a></li>
+                <li class="header__item has-child">
+                  <a href="#">事業紹介</a>
+                  <ul class="header__drop-ul">
+                    <li class="header__drop-li">
+                      <a href="">
+                        <div class="header__drop-img">
+                          <img src="img/j2.jpg" alt="" />
+                        </div>
+                        <span class="header__drop-title">航空運輸事業</span>
+                      </a>
+                    </li>
+                    <li class="header__drop-li">
+                      <a href="">
+                        <div class="header__drop-img">
+                          <img src="img/j3.jpg" alt="" />
+                        </div>
+                        <span class="header__drop-title">空港運営事業</span>
+                      </a>
+                    </li>
+                    <li class="header__drop-li">
+                      <a href="">
+                        <div class="header__drop-img">
+                          <img src="img/j4.jpg" alt="" />
+                        </div>
+                        <span class="header__drop-title">航空貨物事業</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__item"><a href="#">実績紹介</a></li>
+                <li class="header__item"><a href="#">企業情報</a></li>
+                <li class="header__item"><a href="#">コラム</a></li>
+                <li class="header__item"><a href="#">お問い合わせ</a></li>
+              </ul>
+            </nav>
+            <div class="header__open">
+              <button
+                type="button"
+                id="js-drawer-icon"
+                class="drawer-icon"
+                aria-label="メニューボタン"
+              >
+                <span class="drawer-icon__bar"></span>
+                <span class="drawer-icon__bar"></span>
+                <span class="drawer-icon__bar"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Drawer Content -->
+      <div id="js-drawer-content" class="drawer-content">
+        <nav
+          class="drawer-content__menu"
+          aria-label="ドロワーメニューナビゲーション"
+        >
+          <a href="#" class="drawer-content__link">News</a>
+          <a href="#" class="drawer-content__link has-child">事業紹介 </a>
+          <a href="#" class="drawer-content__link">実績紹介</a>
+          <a href="#" class="drawer-content__link">企業情報</a>
+          <a href="#" class="drawer-content__link">コラム</a>
+          <a href="#" class="drawer-content__link">お問い合わせ</a>
+        </nav>
+      </div>
+
+      <div class="mv">
+        <ul class="slider">
+          <li class="slider-item slider-item01"></li>
+          <li class="slider-item slider-item02"></li>
+          <li class="slider-item slider-item03"></li>
+        </ul>
+        <h2 class="mv__title">
+          <span class="mv__title-en js_typing">Fly Beyond Your Dreams</span>
+          <span class="mv__title-ja js_typing">夢を超えるフライト</span>
+        </h2>
+      </div>
+
+      <div class="mv__news">
+        <div class="inner mv__news-inner">
+          <div class="mv__flex">
+            <div class="mv__flex-left">News</div>
+            <ul class="mv__flex-right">
+              <li class="mv__flex-right-item">
+                <time class="mv__time" datetime="">2024.05.24</time
+                ><span class="mv__news-title"
+                  ><a href="">タイトルタイトルタイトル</a></span
+                >
+              </li>
+              <li class="mv__flex-right-item">
+                <time class="mv__time" datetime="">2024.05.24</time
+                ><span class="mv__news-title"
+                  ><a href="">タイトルタイトルタイトル</a></span
+                >
+              </li>
+              <li class="mv__flex-right-item">
+                <time class="mv__time" datetime="">2024.05.24</time
+                ><span class="mv__news-title"
+                  ><a href="">タイトルタイトルタイトル</a></span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="more">
+            <a class="btnlinestretches2" href="">Read more</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="find">
+        <div class="inner">
+          <h2 class="section-title flipLeftTopTrigger">
+            <span>新たな地平を発見</span>
+          </h2>
+          <div class="find__container">
+            <div class="find__flex1 fadeUpTrigger">
+              <div class="find__flex1-img">
+                <img src="img/fly1.jpg" alt="" />
+              </div>
+              <p class="find__flex1-text fadeUpTrigger">
+                心地よい空間と行き届いたサービスで、<br />
+                旅の始まりから終わりまで、<br />
+                あなたの旅を特別なものにします。<br />
+                快適な空の旅を提供し、<br />
+                忘れられない思い出をお届けします。
+              </p>
+            </div>
+            <div class="find__flex2">
+              <div class="find__flex2-img fadeUpTrigger">
+                <img src="img/fly2.jpg" alt="" />
+              </div>
+              <p class="find__flex2-text fadeUpTrigger">
+                美しい風景と新しい出会いを求めて、<br />
+                私たちの翼で空の旅に出かけましょう。<br />
+                心に残る瞬間を一緒に。<br />
+                快適で安全な空の旅をお届けするために、<br />
+                最新の機材とサービスを整えています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="business">
+        <div class="business__title-img">
+          <img src="img/j1.jpg" alt="" />
+          <h2 class="section-title section-title-business">
+            <span>事業紹介</span>
+          </h2>
+        </div>
+        <ul class="business__list">
+          <li class="business__item">
+            <img src="img/j2.jpg" alt="" />
+            <div class="business__card">
+              <span>航空運輸事業</span>
+              <div class="more">
+                <a class="btnlinestretches2 btnlinestretches3" href=""
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </li>
+          <li class="business__item">
+            <img src="img/j3.jpg" alt="" />
+            <div class="business__card">
+              <span>空港運営事業</span>
+              <div class="more">
+                <a class="btnlinestretches2 btnlinestretches3" href=""
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </li>
+          <li class="business__item">
+            <img src="img/j4.jpg" alt="" />
+            <div class="business__card">
+              <span>航空貨物事業</span>
+              <div class="more business__more">
+                <a class="btnlinestretches2 btnlinestretches3" href=""
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="actual">
+        <div class="inner">
+          <h2 class="section-title flipLeftTopTrigger">
+            <span>実績紹介</span>
+          </h2>
+          <ul class="actual__list">
+            <li class="actual__item">
+              <a href=""
+                ><span class="bgextend bgLRextendTrigger"
+                  ><span class="bgappearTrigger"
+                    ><div class="actual__img">
+                      <img src="img/ji1.jpg" alt="" /></div></span
+                ></span>
+                <p class="actual__content-title">タイトルタイトルタイトル</p></a
+              >
+            </li>
+            <li class="actual__item">
+              <a href=""
+                ><span class="bgextend bgLRextendTrigger"
+                  ><span class="bgappearTrigger"
+                    ><div class="actual__img">
+                      <img src="img/ji1.jpg" alt="" /></div></span
+                ></span>
+                <p class="actual__content-title">タイトルタイトルタイトル</p></a
+              >
+            </li>
+            <li class="actual__item">
+              <a href=""
+                ><span class="bgextend bgLRextendTrigger"
+                  ><span class="bgappearTrigger"
+                    ><div class="actual__img">
+                      <img src="img/ji1.jpg" alt="" /></div></span
+                ></span>
+                <p class="actual__content-title">タイトルタイトルタイトル</p></a
+              >
+            </li>
+          </ul>
+          <div class="more actual__more">
+            <a class="btnlinestretches2" href="">Read more</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="column">
+        <div class="inner">
+          <h2 class="section-title flipLeftTopTrigger"><span>コラム</span></h2>
+          <ul class="column__list">
+            <li class="column__item">
+              <a href=""
+                ><span class="bgextend bgLRextendTrigger"
+                  ><span class="bgappearTrigger"
+                    ><div class="column__img">
+                      <img src="img/c1.jpg" alt="" /></div></span
+                ></span>
+                <div class="column__container">
+                  <div>
+                    <time class="column__time" datetime="">2024.05.24</time>
+                    <p class="column__content-title">
+                      タイトルタイトルタイトル
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="column__item">
+              <a href=""
+                ><span class="bgextend bgLRextendTrigger"
+                  ><span class="bgappearTrigger"
+                    ><div class="column__img">
+                      <img src="img/c1.jpg" alt="" /></div></span
+                ></span>
+                <div class="column__container">
+                  <div>
+                    <time class="column__time" datetime="">2024.05.24</time>
+                    <p class="column__content-title">
+                      タイトルタイトルタイトル
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="column__item">
+              <a href=""
+                ><span class="bgextend bgLRextendTrigger"
+                  ><span class="bgappearTrigger"
+                    ><div class="column__img">
+                      <img src="img/c1.jpg" alt="" /></div></span
+                ></span>
+                <div class="column__container">
+                  <div>
+                    <time class="column__time" datetime="">2024.05.24</time>
+                    <p class="column__content-title">
+                      タイトルタイトルタイトル
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="column__item">
+              <a href=""
+                ><span class="bgextend bgLRextendTrigger"
+                  ><span class="bgappearTrigger"
+                    ><div class="column__img">
+                      <img src="img/c1.jpg" alt="" /></div></span
+                ></span>
+                <div class="column__container">
+                  <div>
+                    <time class="column__time" datetime="">2024.05.24</time>
+                    <p class="column__content-title">
+                      タイトルタイトルタイトル
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="more column__more">
+            <a class="btnlinestretches2" href="">Read more</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="inner">
+          <div class="footer__flex">
+            <h3 class="footer-title">Gullit</h3>
+            <nav class="footer__nav">
+              <ul class="footer__list">
+                <li class="footer__item"><a href="#">News</a></li>
+                <li class="footer__item"><a href="#">事業紹介</a></li>
+                <li class="footer__item"><a href="#">実績紹介</a></li>
+                <li class="footer__item"><a href="#">企業情報</a></li>
+                <li class="footer__item"><a href="#">コラム</a></li>
+                <li class="footer__item"><a href="#">お問い合わせ</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__copyright"><small>&copy; Gullit</small></div>
+        </div>
+      </footer>
+
+      <!-- wrap -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/shuffle-text@0.3.0/build/shuffle-text.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
